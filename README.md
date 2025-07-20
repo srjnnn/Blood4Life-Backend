@@ -34,7 +34,7 @@ Blood4Life (Blood4U) is a platform that connects blood donors and recipients in 
 ### Prerequisites
 
 - Node.js (v16 or higher recommended)  
-- PostgreSQL database  
+- supabase database  
 - npm or yarn package manager  
 - Git
 
