@@ -17,7 +17,7 @@ export default class V1Route{
 
 
         // init setup routes
-
+       this.setupRoutes();
 
     }
     setupRoutes(){
