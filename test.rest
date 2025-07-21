@@ -1,1 +1,7 @@
-GET http://localhost:4000/api/v1/test
+POST http://localhost:4000/api/v1/login
+Content-Type: application/json
+
+{
+  "email": "admin@srjnn.com",
+  "password": "blood4u@225"
+}

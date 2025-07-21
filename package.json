@@ -21,6 +21,7 @@
   "homepage": "https://github.com/srjnnn/Blood4Life-Backend#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.52.0",
+    "bcryptjs": "^3.0.2",
     "chalk": "^5.4.1",
     "compression": "^1.8.1",
     "cors": "^2.8.5",
