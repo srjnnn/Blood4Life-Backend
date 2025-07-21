@@ -4,7 +4,6 @@ import bcrypt from 'bcryptjs';
 
 export const login = async (req, res) => {
   const { email, password } = req.body;
-  console.log("Searching for user : ", email)
   let user = null;
   let role = null;
   let table = null;
@@ -57,7 +56,6 @@ const{data,error} = await supabase.auth.signInWithPassword({email,password});
 if(error){
     return res.status(401).json({error : "Invalid crediantials"})
 }
- console.log(process.env.JWT_SECRET)
   // Create JWT
   const token = jwt.sign(
     { id: user.id, email: user.email, role },
