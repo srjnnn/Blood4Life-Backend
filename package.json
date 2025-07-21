@@ -4,7 +4,8 @@
   "description": "Blood4Life (Blood4U) is a platform that connects blood donors and recipients in real-time to facilitate timely blood donations. This backend service handles API requests, user authentication, database interactions, and supports the frontend by providing all necessary data and services.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -13,15 +14,22 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/srjnnn/Blood4Life-Backend/issues"
   },
   "homepage": "https://github.com/srjnnn/Blood4Life-Backend#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.52.0",
+    "chalk": "^5.4.1",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
-    "nodemailer": "^7.0.5"
+    "helmet": "^8.1.0",
+    "ip": "^2.0.1",
+    "logger": "^0.0.1",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10"
   }
 }

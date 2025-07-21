@@ -1,11 +1,12 @@
 // import the prerequisites from the controllers
-// import
+import { getTestData } from "../../../controllers/test/index.js";
+
 
 import { Router } from "express";
 
 class testRoutes {
     constructor(){
-       this.route = Router({mergeParams : true});
+       this.router = Router({mergeParams : true});
        this.setupRoutes();  
     }
     setupRoutes(){
