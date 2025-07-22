@@ -4,9 +4,15 @@ import { getRandomNumber } from '../../../utils/randomNumber.js';
 
 export const signup = async (req, res) => {
   try {
-    const { email, password, name, location, phone } = req.body;
+    const { email, password, name, location, phone, gender } = req.body;
 
-    const { data, error } = await supabase.auth.signUp({ email, password });
+    // const { data, error } = await supabase.auth.signUp({ email, password });
+    // Example: create a user with Supabase Admin API
+const { data, error } = await supabase.auth.admin.createUser({
+  email,
+  email_confirm: true, 
+  password,
+});
     if (error) return res.status(400).json({ error: error.message });
 
     const userId = data.user.id;
@@ -19,12 +25,13 @@ export const signup = async (req, res) => {
         email,
         name,
         location,
+        gender,
         phone,
-        verification_code: code,
+        code: code,
       }]);
 
     if (tableError) {
-      return res.status(500).json({ error: "Error saving user to clients table" });
+      return res.status(500).json({ tableError});
     }
 
     const body = 
