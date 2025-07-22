@@ -1,7 +1,11 @@
-POST http://localhost:4000/api/v1/login
+POST http://localhost:4000/api/v1/signup
 Content-Type: application/json
 
 {
-  "email": "admin@srjnn.com",
-  "password": "blood4u@225"
+  "email": "mrsrjn224@gmail.com",
+  "password": "StrongPassword123",
+  "name": "New Client",
+  "location": "City Name",
+  "phone": 9825958298,
+  "gender":"M"
 }
