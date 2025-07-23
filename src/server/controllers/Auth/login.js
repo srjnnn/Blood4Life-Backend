@@ -43,7 +43,7 @@ export const login = async (req, res) => {
     if (clientData) {
       // Check if email is verified
       if (!clientData.verified) {
-        return res.status(403).json({ error: 'Email not verified. Please verify your account before logging in.' });
+        return res.status(403).json({ error: 'Email not verified. Please verify your account before logging in.',email });
       }
 
       user = clientData;
