@@ -1,12 +1,8 @@
-POST http://localhost:4000/api/v1/signup/verify
+POST http://localhost:4000/api/v1/login/reset/verify
 Content-Type: application/json
 
 {
-  "email": "mrsrjn224@gmail.com",
-  "password": "StrongPassword123",
-  "name": "New Client",
-  "location": "City Name",
-  "phone": 9825958298,
-  "gender":"M",
-  "otp" : 234567
+  "otp" : 295129,
+  "email" : "mrsrjn224@gmail.com",
+  "newPassword" : "helloWorld"
 }
