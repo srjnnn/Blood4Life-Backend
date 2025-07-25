@@ -6,6 +6,7 @@ import testRoutes from "./test/index.js"
 import { authenticate, authorize } from "../../middleware/authMiddleware.js";
 import loginRoute from "./Auth/login.js";
 import signUpRoutes from "./Auth/signup.js";
+import validateRoute from "./Auth/validate.js";
 
 export default class V1Route{
     constructor(){
@@ -14,6 +15,8 @@ export default class V1Route{
         // Mount login route first (no authentication)
         this.loginRoute = new loginRoute();
         this.signUpRoutes = new signUpRoutes();
+        this.validateRoute = new validateRoute();
+        this.router.use("/validate",this.validateRoute.router)
         this.router.use("/login", this.loginRoute.router);
         this.router.use("/signup", this.signUpRoutes.router);
 
