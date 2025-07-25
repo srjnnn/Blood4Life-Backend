@@ -1,8 +1,13 @@
-POST http://localhost:4000/api/v1/login/reset/verify
+POST http://localhost:4000/api/v1/validate
 Content-Type: application/json
 
 {
-  "otp" : 295129,
+  "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoibXJzcmpuMjI0QGdtYWlsLmNvbSIsInJvbGUiOiJjbGllbnQiLCJpYXQiOjE3NTM0NjcwODYsImV4cCI6MTc1MzU1MzQ4Nn0.-HRJMSX6BlwF62FQUwgoH3rR54FqlPjbsiYXIED7hyY",
   "email" : "mrsrjn224@gmail.com",
-  "newPassword" : "helloWorld"
+  "password" : "blood4u@225",
+  "name" : "srijan Kharel",
+  "location":"Birtamode -5 jhapa",
+  "otp":602212,
+  "phone":9825958298,
+  "gender":"M"
 }
